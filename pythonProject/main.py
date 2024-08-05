@@ -537,19 +537,17 @@ class Hat:
 #hat = Hat()
 Hat.sort("Harry")
 
-'''
+
 #2. Inheritance
 class Wizard:
     def __init__(self, name):
         self.name = name
         if not name:
             raise ValueError("INVALID VALUE")
-
 class Student2(Wizard):
     def __init__(self, name, house):
         super().__init__(name)
         self.house = house
-
 class Professor(Wizard):
     def __init__(self, name, subject):
         super().__init__(name)
@@ -558,4 +556,6 @@ class Professor(Wizard):
 wizard = Wizard("Bear")
 studentz = Student2("Harry", "Gryffindor")
 professor = Professor("Roxy", "Water Saint Magic")
-
+print(wizard, studentz, professor)
+'''
+#Ask Chat GPT On How To Print Data Taken From Subclasses As Shown Above
