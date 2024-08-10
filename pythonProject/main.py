@@ -559,3 +559,27 @@ professor = Professor("Roxy", "Water Saint Magic")
 print(wizard, studentz, professor)
 '''
 #Ask Chat GPT On How To Print Data Taken From Subclasses As Shown Above
+class Vault:
+    def __init__(self,dollars = 0,cents = 0,quarters = 0):
+        self.dollars = dollars
+        self.cents = cents
+        self.quarters = quarters
+    def __str__(self):
+        return f"{self.dollars} Dollars, {self.cents} Cents, {self.quarters} Quarters"
+    def __add__(self, other):
+        dollars = self.dollars + other.dollars
+        cents = self.cents + other.cents
+        quarters = self.quarters + other.quarters
+        return Vault(dollars,cents,quarters)
+
+faizan = Vault(156,67,4)
+print(faizan)
+meesum = Vault(654,23,9)
+print(meesum)
+
+total = faizan + meesum
+print(total)
+
+#----------------------------------------(Bro Code's OOP)---------------------------------------
+
+
