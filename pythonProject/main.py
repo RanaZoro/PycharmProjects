@@ -582,4 +582,42 @@ print(total)
 
 #----------------------------------------(Bro Code's OOP)---------------------------------------
 
+#Class Variables
+class Car:
+    wheels = 4 #Class Variable
+    def __init__(self,car_name):
+        self.car_name = car_name #Instance Variable
+    def __str__(self):
+        return self.car_name
+n = Car.wheels
+print(n)
+n1 = Car("Honda Civic")
+print(n1)
 
+#muti-level inheritance = when a child has a child and this could be extended
+class Organism:
+    alive = True
+class Animal(Organism):
+    def Eat(self):
+        print("Animal Is Eating")
+class Rabbit(Animal):
+    def binky(self):
+        print("Rabbit Is Doing A Binky")
+Rabbit = Rabbit()
+Rabbit.Eat()
+print(Rabbit.alive)
+
+#multiple ineritance
+class Prey:
+    def flee(self):
+        print("Animal Is Fleeing")
+class Predator:
+    def hunt(self):
+        print("Animal Is Hunting")
+class Fish(Prey, Predator):
+    pass
+fish = Fish()
+fish.hunt()
+fish.flee()
+
+#Resume Tutorial From = 4:01:51
