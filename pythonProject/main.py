@@ -640,8 +640,20 @@ Rabbit = Rabbit()
 #Chaining Methods In The Rabbit Child
 Rabbit.Eat().Sleep()
 
-#ABSTRACTION 4:12:11
+#ABSTRACTION  Of Bro Code  = 4:19:12
+class Vehicle(ABC):
+    @abstractmethod
+    def go(self):
+        pass
+class Car(Vehicle):
 
+    def go(self):
+        print("Car Go Vroom")
+class Bike(Vehicle):
+
+    def go(self):
+        print("Bike Go Gring!")
+Car().go()
 
 
 
