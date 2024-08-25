@@ -620,4 +620,29 @@ fish = Fish()
 fish.hunt()
 fish.flee()
 
-#Resume Tutorial From = 4:01:51
+#POLYMORPHISM
+
+#Method Overriding(Basic Polymorphism)
+class Rodent():
+    def Eat(self):
+        print("Animal Is Eating")
+class Rabbit(Rodent):
+    def Eat(self): #Having Same Function Name As A Parent Method Overrides The Content When Called.
+        print("Rabbit Is Eating")
+        return self
+    def Sleep(self):
+        print("Rabbit Is Sleeping")
+        return self
+Rabbit = Rabbit()
+# Rabbit.Eat()
+
+#Method Chaining
+#Chaining Methods In The Rabbit Child
+Rabbit.Eat().Sleep()
+
+#ABSTRACTION 4:12:11
+
+
+
+
+
