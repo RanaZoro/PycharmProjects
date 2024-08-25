@@ -5,6 +5,7 @@ import random
 import os
 import shutil
 import module #as mdl(nickname)
+
 #or from module import hello(importing a specific function from a module/script)
 #Variables
 fstnme = "Rana"
