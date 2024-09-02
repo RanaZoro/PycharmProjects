@@ -48,4 +48,7 @@ print(int(item1.discount()))
 for instance in Item.all:
     print(instance.name,end=" ")
 
-#continue from 51:00
+#CSV FILE = COMMA SEPERATED VALUE FILE. In This File, Each Line Represents A Structure Of Data From Which We Can
+#Access Our Code (Only Avalaible In Pycharm Pro :(
+
+#continue from 53:23
