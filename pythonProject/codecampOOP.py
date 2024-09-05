@@ -37,6 +37,22 @@ class Item:
     @classmethod
     def clsmethod(cls):
         return "Class Methods Are Used When We Need To Work With Something That's Not An Instance Of A Class"
+    @staticmethod
+    def check_number(number):
+        """
+        Checks the type of the number and returns it as an integer if it's a float equivalent to an integer.
+
+        :param number: The number to check.
+        :return: The number as an integer if it's a float equivalent to an integer, otherwise the original number.
+        """
+        if isinstance(number, int):
+            return number
+        elif isinstance(number, float): #isinstance(object, type) "Used For Checking(Returns True Or False)"
+            if number.is_integer(): #only works in decimal vals like 1.0 or 3.14
+                return int(number)  # Convert to int if it's a float equivalent to an integer
+            return number
+        else:
+            raise ValueError("The input must be an integer or a float.")
     def __repr__(self):
         return f"Item({self.name},{self.price},{self.quantity})"
 
@@ -55,7 +71,13 @@ for instance in Item.all:
 #Access Our Code Only Avalaible In Pycharm Pro :(
 print(Item.clsmethod())
 
-#continue from 53:23
+numbers = [10, 10.5,12.0]
+for num in numbers:
+    result = Item.check_number(num)
+    print(f"Before = {num}, After = {result}")
+
+
+#continue from 1:13:27
 
 
 
