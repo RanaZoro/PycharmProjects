@@ -54,7 +54,7 @@ class Item:
         else:
             raise ValueError("The input must be an integer or a float.")
     def __repr__(self):
-        return f"Item({self.name},{self.price},{self.quantity})"
+        return f"{self.__class__.__name__}({self.name},{self.price},{self.quantity})"
 
 item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
@@ -76,11 +76,26 @@ for num in numbers:
     result = Item.check_number(num)
     print(f"Before = {num}, After = {result}")
 
+class Phone(Item):
+    all = []
+    def __init__(self, name: str, price: float, quantity=0, broken_phones=0, fquantity=0):
+        super().__init__(
+            name, price, quantity
+        )
+        assert price >= 0
+        assert quantity >= 0
+        assert broken_phones >= 0
+        self.broken_phones = broken_phones
+        self.fquantity = fquantity
+        Phone.all.append(self) #Can Be Removed
+    def real_price(self):
+        pass
 
-#continue from 1:13:27
+phone1 = Phone("IPhone 12",500.0,8,1)
+print(phone1.sales())
+phone1.real_price()
 
+print(Phone("IPhone 13 Pro",800.0,8,2))
+print(Item("IPhone 13",800.0,8))
 
-
-
-
-
+#continue from 1:30:12
