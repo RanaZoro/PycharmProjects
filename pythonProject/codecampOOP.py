@@ -27,7 +27,7 @@ class Item:
         assert quantity >=0
         self.price = price
         self.quantity = quantity
-        self.name = name
+        self._name = name
 
         Item.all.append(self)
     def sales(self):
@@ -55,11 +55,15 @@ class Item:
             raise ValueError("The input must be an integer or a float.")
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name},{self.price},{self.quantity})"
+    @property #Getters Are Immutable After Initialization
+    def read_only(self):
+        return self._name
 
 item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
 item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
+#From Here
 item5 = Item("Keyboard", 75, 5)
 print(item1.name)
 print(item1.sales())
@@ -97,5 +101,7 @@ phone1.real_price()
 
 print(Phone("IPhone 13 Pro",800.0,8,2))
 print(Item("IPhone 13",800.0,8))
+
+
 
 #continue from 1:30:12
