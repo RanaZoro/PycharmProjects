@@ -102,6 +102,6 @@ phone1.real_price()
 print(Phone("IPhone 13 Pro",800.0,8,2))
 print(Item("IPhone 13",800.0,8))
 
-
+print("test")
 
 #continue from 1:30:12
