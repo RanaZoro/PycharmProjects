@@ -641,7 +641,7 @@ Rabbit = Rabbit()
 #Chaining Methods In The Rabbit Child
 Rabbit.Eat().Sleep()
 
-#ABSTRACTION  Of Bro Code  = 4:19:12
+#ABSTRACTION
 class Vehicle(ABC):
     @abstractmethod
     def go(self):
@@ -651,11 +651,30 @@ class Car(Vehicle):
     def go(self):
         print("Car Go Vroom")
 class Bike(Vehicle):
-
     def go(self):
         print("Bike Go Gring!")
 Car().go()
 
+#Passing Objects As Arguments :3
+def oaa(arg):
+    return arg.go()
+bike_1 = Bike()
+oaa(bike_1)
+
+# Duck typing is a concept in Python where the type or class of an object is less important than the methods it defines or the behavior it exhibits.
+# If an object behaves like a certain type (e.g., it has the necessary methods), it can be used as that type.
+class Duck:
+    def quack(self):
+        return "Quack!"
+class Person:
+    def quack(self):
+        return "I'm pretending to be a duck!"
+def make_it_quack(duck_like):
+    # This function accepts any object that has a quack() method, demonstrating duck typing.
+    print(duck_like.quack())
+duck = Duck()
+person = Person()
+make_it_quack(duck)   # Output: Quack! or make_it_quack(person) # Output: I'm pretending to be a duck!
 
 
-
+#4:27:38
