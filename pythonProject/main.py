@@ -677,4 +677,10 @@ person = Person()
 make_it_quack(duck)   # Output: Quack! or make_it_quack(person) # Output: I'm pretending to be a duck!
 
 
-#4:27:38
+#4:27:38 (Bro Code)
+
+
+
+
+
+
