@@ -1,3 +1,16 @@
 Mou Yamete Kudasai!
 Ah Ah Ah Ah
- EEIAAAA!!! 
+ EEIAAAA!!!
+ class Solution:
+    def __init__(self,x,rev):
+        self.x = x
+        self.rev = rev
+    @classmethod
+    def isPalindrome(cls, param_1 = bool):
+        if x == rev:
+            param_1 = print(True)
+        else:
+            param_1 = print(False)
+x = input("Enter A Three Digit Number = ")
+rev = x[::-1]
+Solution(x,rev).isPalindrome()
