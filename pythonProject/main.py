@@ -558,7 +558,7 @@ wizard = Wizard("Bear")
 studentz = Student2("Harry", "Gryffindor")
 professor = Professor("Roxy", "Water Saint Magic")
 print(wizard, studentz, professor)
-'''
+
 #Ask Chat GPT On How To Print Data Taken From Subclasses As Shown Above
 class Vault:
     def __init__(self,dollars = 0,cents = 0,quarters = 0):
@@ -675,8 +675,26 @@ def make_it_quack(duck_like):
 duck = Duck()
 person = Person()
 make_it_quack(duck)   # Output: Quack! or make_it_quack(person) # Output: I'm pretending to be a duck!
+'''
+#CS50 REGEX
+#====>
+email4work = input("Enter Your Email = ").strip()
+import re
+if re.search(r"^\w+@(\w+\.)?\w+\.(com|edu|org|net)$",email4work, re.I):
+    print("Valid!")
+else:
+    print("Invalid!")
 
+exynos = input("What's Your Name? : ").strip()
+if matches := re.fullmatch("(.+), *(.+)",exynos):
+    exynos = matches.group(2) + " " + matches.group(1)
+print(f"Hello! {exynos}")
 
+#instgram
+subs = input("Repeat After Me 'The Rain In Pakistan' = ").lower()
+mint = re.sub("the rain in","The Wind In",subs)#REGEX CAN STILL BE USED IN THE PATTERN SECTION
+print(mint)
+#01:53:26
 #4:27:38 (Bro Code)
 
 
